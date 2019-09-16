@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<!--            SPOILER ALERT FOR NOSEY WEBBY TYPES            -->
+<!-- ONLY LOOK ROUND THE FILES IF YOU'RE DONE PLAYING PROPERLY -->
+
+<head>
+
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>The Adventures of Chris Watson HD</title>
+	
+	<script src="aoe-settings.js"></script>
+	<script src="aoe-images-and-animations.js"></script>
+	<script src="aoe-ob-prototype.js"></script>
+	<script src="aoe-screen-prototype.js"></script>	
+	<script src="aoe-text-box.js"></script>	
+	<script src="aoe-interactions.js"></script>	
+	<script src="aoe-engine.js"></script>
+	
+	<style type="text/css">
+	
+		window {height: 100%; margin: 0px; padding: 0px;}
+		html {height: 100%;}
+		body {background-color: black; height: 100%; margin: 0px; padding: 0px; display: flex; align-items: center; justify-content: center;}
+		
+		canvas#aoe-game-area {
+			background-color: blue;   
+			image-rendering: pixelated;
+			image-rendering: crisp-edges;
+			border: 0;
+			padding: 0;
+			margin: 0;
+		}
+		
+		img {
+			image-rendering: pixelated;
+		}
+		
+		#click-to-start {color: white; background-color: black; position: fixed; top: 0; left: 0; width: 100%; height: 100%; text-align: center; font-size: 25px; font-family: sans-serif; transition: all 0.2s linear; display: flex; align-items: center; justify-content: center;}
+		
+		#click-to-start:hover {cursor: pointer; color: #aaaaaa;}
+		
+		#loading{color: white; background-color: black; position: fixed; top: 0; left: 0; width: 100%; height: 100%; text-align: center; font-size: 25px; font-family: sans-serif; transition: all 0.2s linear; display: flex; align-items: center; justify-content: center; display: none;}
+		
+		#loading img{margin-top: 20%;}
+		
+		#donate {background-color: white; color: black; position: fixed; font-family: sans-serif; bottom: 0px; right: 40px; width: 200px; padding: 20px; display: none;}
+		
+		#donate .close-button {float: right; margin: 0px 0px 10px 10px; font-weight: bold;}
+		#donate .close-button:hover {cursor: pointer; color: #383838;}
+		
+	</style>
+
+</head>
+
+<body>
+
+	<canvas id="aoe-game-area" width="320" height="240"></canvas>
+	<div id="click-to-start"><span>Click to start</span></div>
+	<div id="loading"><div><img src="loading.gif" alt="loading" /><br />Loading...</div></div>
+
+	<div id="donate">
+		<div class="close-button" title="Close">x</div>
+		<p><strong>Are you having a nice time?</strong></p>
+		You can thank me by giving some money to a nice charity. I like <a href="https://acts435.org.uk/" target="blank" title="Acts 435">these guys</a>, but maybe you have your own ideas.</p>
+	</div>
+
+</body>
+
+</HTML>
