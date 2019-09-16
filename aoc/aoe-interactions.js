@@ -210,7 +210,7 @@ aoe.interactions.person_chris = {
 								}
 								if (choice === "lie") {
 									CHRIS.says(["Dog ate it."]);
-									MR_F.says(["So you needed a minute to", "remember that your non-", "existant dog ate it?"]);
+									MR_F.says(["So you needed a minute to", "remember that your non-", "existent dog ate it?"]);
 									CHRIS.says(["..."]);
 									MR_F.says(["That's the best you can", "come up with?"]);
 									CHRIS.says(["..."]);
@@ -1455,7 +1455,7 @@ aoe.interactions.person_chris = {
 				lines1 = ["This is total rubbish."];
 				choices = [{line: "...read it again anyway", result: "read"}, {line: "...leave it", result: "no-read"}];
 			} else {
-				lines1 = ["Print out of someone's", "creative writing assignent..."];
+				lines1 = ["Print out of someone's", "creative writing assignment..."];
 				choices = [{line: "...read it", result: "read"}, {line: "...leave it", result: "no-read"}];			
 			}
 			CHRIS.says(lines1);
@@ -1740,7 +1740,7 @@ aoe.interactions.person_chris = {
 		if (CHRIS.flags.needs_to_escape) {
 			CHRIS.says(["Reading books got me", "into this mess..."]);
 		} else {
-			CHRIS.says(["Copies of Romeo and Juliette."]);
+			CHRIS.says(["Copies of Romeo and Juliet."]);
 		}
 	},
 	"e8_store_room_books_right": function (interactor, other) {
@@ -1805,7 +1805,7 @@ aoe.interactions.person_chris = {
 					});
 				}
 				if (CHRIS.flags.has_french_book) {
-					CHRIS.says(["Just more copies of", "Romeo and Juliette."]);
+					CHRIS.says(["Just more copies of", "Romeo and Juliet."]);
 				}
 				if (CHRIS.flags.has_revised) {
 					CHRIS.says(["I can't fit any more", "French in my head."]);
@@ -1817,7 +1817,7 @@ aoe.interactions.person_chris = {
 					CHRIS.says(["Bit late for that now."]);
 				}
 				if (CHRIS.flags.has_french_book) {
-					CHRIS.says(["Just more copies of", "Romeo and Juliette"]);
+					CHRIS.says(["Just more copies of", "Romeo and Juliet"]);
 				}
 				if (CHRIS.flags.has_revised) {
 					CHRIS.says(["That's enough French."]);
@@ -1945,7 +1945,7 @@ aoe.interactions.person_chris = {
 			CHRIS.says(["No more onions in here."]);
 		}
 		if (CHRIS.flags.onion === "rejected") {
-			CHRIS.says(["Nope, don't wan't an onion."]);
+			CHRIS.says(["Nope, don't want an onion."]);
 		}
 		if (CHRIS.flags.onion === "undiscovered") {
 			CHRIS.says(["I have no more business here."]);
@@ -2358,8 +2358,8 @@ aoe.interactions.person_mr_f = {
 		}
 	},		
 	"e8_store_room_books_left": function (interactor, other) {
-		MR_F.says(["Romeo and Juliette. Why", "is it always Shakespeare?"]);
-		MR_F.says(["There are other playwrites.", "Maybe Pinter or something?"]);
+		MR_F.says(["Romeo and Juliet. Why", "is it always Shakespeare?"]);
+		MR_F.says(["There are other playwrights.", "Maybe Pinter or something?"]);
 	},	
 	"e8_store_room_books_right": function (interactor_other) {
 		if (!CHRIS.flags.has_french_book) {
