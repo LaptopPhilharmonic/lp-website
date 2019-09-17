@@ -909,7 +909,7 @@ aoe.interactions.person_chris = {
 									MRS_J.says(["Oh ... c'est quoi Tekken?"]);
 									CHRIS.says(["Un jeu de combat japonais."]);
 									MRS_J.says(["Votre francais est incroyable!"]);
-									CHRIS.says(["Oui, j'ai lu un livre", "bleu pendant quelques minutes."]);
+									CHRIS.says(["Oui, j'ai lu un livre bleu", "pendant quelques minutes."]);
 									MRS_J.says(["Je vois..."]);
 									MRS_J.says(["Dis-moi, qu'est-ce que", "tu preferes en France?"]);
 									CHRIS.says(["Sans aucun doute c'est.."]).and_then(() => {
@@ -976,7 +976,7 @@ aoe.interactions.person_chris = {
 									MRS_J.says(["Oh ... c'est quoi Tekken?"]);
 									CHRIS.says(["Un jeu de combat japonais."]);
 									MRS_J.says(["Votre francais est incroyable"]);
-									CHRIS.says(["Oui, j'ai lu un livre", "bleu pendant quelques minutes."]);
+									CHRIS.says(["Oui, j'ai lu un livre bleu", "pendant quelques minutes."]);
 									MRS_J.says(["Je vois..."]);
 									MRS_J.says(["Dis-moi, qu'est-ce que", "tu preferes en France?"]);
 									CHRIS.says(["Sans aucun doute c'est.."]).and_then(() => {
