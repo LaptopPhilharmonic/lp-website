@@ -193,7 +193,7 @@ aoe.interactions.person_chris = {
 									MR_F.says(["This is... incredible."]).and_then(() => {
 										aoe.engine.stop_music();
 										aoe.engine.play_audio("con_man_chris");
-										aoe.engine.scrolling_image(["conman_chris_text"]).and_then(() => {
+										aoe.engine.scrolling_image("conman_chris_text", 60000).and_then(() => {
 											aoe.engine.end_game("con_man_chris");
 										});
 									});
