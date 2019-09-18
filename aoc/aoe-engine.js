@@ -370,17 +370,57 @@ aoe.engine.start = function () {
 				const rightPoker = document.querySelector("#pokey-device-right");
 				const interactPoker = document.querySelector("#pokey-device-interact");
 				
-				upPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.up});});
-				downPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.down});});
-				leftPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.left});});
-				rightPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.right});});
-				interactPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.action});});
+				upPoker.addEventListener("touchstart", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 
+					aoe.keydown({"keyCode": aoe.settings.keys.up});
+				});
+				downPoker.addEventListener("touchstart", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 
+					aoe.keydown({"keyCode": aoe.settings.keys.down});
+				});
+				leftPoker.addEventListener("touchstart", (e) => {
+					e.preventDefault();
+					e.stopPropagation();
+					aoe.keydown({"keyCode": aoe.settings.keys.left});
+				});
+				rightPoker.addEventListener("touchstart", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 					
+					aoe.keydown({"keyCode": aoe.settings.keys.right});
+				});
+				interactPoker.addEventListener("touchstart", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 					
+					aoe.keydown({"keyCode": aoe.settings.keys.action});
+				});
 
-				upPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.up});});
-				downPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.down});});
-				leftPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.left});});
-				rightPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.right});});
-				interactPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.action});});
+				upPoker.addEventListener("touchend", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 					
+					aoe.keyup({"keyCode": aoe.settings.keys.up});
+				});
+				downPoker.addEventListener("touchend", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 
+					aoe.keyup({"keyCode": aoe.settings.keys.down});
+				});
+				leftPoker.addEventListener("touchend", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 
+					aoe.keyup({"keyCode": aoe.settings.keys.left});
+				});
+				rightPoker.addEventListener("touchend", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 					
+					aoe.keyup({"keyCode": aoe.settings.keys.right});
+				});
+				interactPoker.addEventListener("touchend", (e) => {
+					e.preventDefault();
+					e.stopPropagation(); 
+					aoe.keyup({"keyCode": aoe.settings.keys.action});
+				});
 			}
 			
 			aoe.engine.setup_game_data();
