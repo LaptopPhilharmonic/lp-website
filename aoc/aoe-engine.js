@@ -370,17 +370,17 @@ aoe.engine.start = function () {
 				const rightPoker = document.querySelector("#pokey-device-right");
 				const interactPoker = document.querySelector("#pokey-device-interact");
 				
-				upPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.up});});
-				downPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.down});});
-				leftPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.left});});
-				rightPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.right});});
-				interactPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.action});});
+				upPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.up});});
+				downPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.down});});
+				leftPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.left});});
+				rightPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.right});});
+				interactPoker.addEventListener("touchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.action});});
 
-				upPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.up});});
-				downPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.down});});
-				leftPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.left});});
-				rightPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.right});});
-				interactPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.action});});
+				upPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.up});});
+				downPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.down});});
+				leftPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.left});});
+				rightPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.right});});
+				interactPoker.addEventListener("touchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.action});});
 			}
 			
 			aoe.engine.setup_game_data();
