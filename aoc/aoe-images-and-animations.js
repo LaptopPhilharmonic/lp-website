@@ -103,7 +103,7 @@ aoe.images_to_load = {
 	"gotd_3": "gotd-3.png",
 	"gotd_4": "gotd-4.png",
 	"gotd_5": "gotd-5.png",
-	"advert_board": "advert-board.png",
+	"advert_board": "e8-board-2.png",
 	"wool_warning": "wool-warning.png",
 	"wool_text": "wool-text.png",
 	"revision_message": "revision-message.png",
