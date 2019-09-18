@@ -361,6 +361,28 @@ aoe.engine.start = function () {
 				document.querySelector("#donate").style.display = "none";
 			});
 			
+			// Special for Howes in case you're on a modernfangled pokey thing
+			if ("ontouchstart" in document.documentElement) {
+				document.querySelector("#pokey-device-controls").style.display = "block";
+				const upPoker = document.querySelector("#pokey-device-up");
+				const downPoker = document.querySelector("#pokey-device-down");
+				const leftPoker = document.querySelector("#pokey-device-left");
+				const rightPoker = document.querySelector("#pokey-device-right");
+				const interactPoker = document.querySelector("#pokey-device-interact");
+				
+				upPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.up});});
+				downPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.down});});
+				leftPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.left});});
+				rightPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.right});});
+				interactPoker.addEventListener("ontouchstart", () => {aoe.keydown({"keyCode": aoe.settings.keys.action});});
+
+				upPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.up});});
+				downPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.down});});
+				leftPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.left});});
+				rightPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.right});});
+				interactPoker.addEventListener("ontouchend", () => {aoe.keyup({"keyCode": aoe.settings.keys.action});});
+			}
+			
 			aoe.engine.setup_game_data();
 		}
 	}
