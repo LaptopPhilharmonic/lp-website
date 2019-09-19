@@ -2284,7 +2284,7 @@ aoe.interactions.person_mr_f = {
 		SAM.says(["Has someone been fiddling", "in the dev tools console?"]);
 	},		
 	"e8_window": function (interactor, other) {
-		MR_F.says(["I wish I was in a proper building.", "Even Graphics isn't stuck in a hut."]);
+		MR_F.says(["Wish I had a proper building.", "Even Graphics isn't in a hut."]);
 	},	
 	"e8_boards_bottom": function (interactor, other) {
 		MR_F.says(["Little Colin bless him. Sweet", "kid. Shame his story is awful."]);
