@@ -1,5 +1,7 @@
 <!DOCTYPE HTML>
-<HTML lang="en">
+
+<HTML>
+
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -13,96 +15,222 @@
 	
 	<style type="text/css">
 	
-		html, body{height: 100%;}
+		html, body { 
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			min-height: 100%; 
+		}
 	
-		body{
-			font-family: Helvetica, Arial, sans-serif; 
-			font-size: 16px; 
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 1.2rem; 
 			margin: 0px; 
 			padding: 0px; 
-			text-align: center; 
-			background-image: url(images/angry-face-angled-transparent.png), url(images/laughing-face-angled-transparent.png); 
-			background-position: top left, bottom right; 
-			background-repeat: no-repeat, no-repeat; 
-			background-size: contain, contain; 
-			background-attachment: fixed, fixed;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			align-content: stretch;
+			background-color: #1A0F0F; 
 		}
-		h1, h2{font-weight: normal; margin-top: 0px;}
-		h1{font-size: 50px; line-height: 50px; margin: 20px 0px 40px 0px;}
 		
-		main{box-sizing: border-box; max-width: 800px; padding: 20px; text-align: left; margin-left: auto; margin-right: auto; background-color: rgba(255, 255, 255, 0.9); min-height: 100%;)}
+		h1, h2, h3 {
+			font-weight: normal; 
+			margin-top: 0px;
+		}
 		
-		section{padding-bottom: 20px; border-bottom: 1px solid #dddddd; margin-bottom: 20px;}
-		.TMText1{color: #c8102e;}
-		.TMText2{color: #012169;}
+		h3 {
+			color: #f89824;
+		}
 		
-		#pianoSonataEP ul{list-style-type: none; margin: 0px; padding: 0px;}
-		#pianoSonataEP ul li{display: inline-block; margin-right: 10px;}
+		h1 {	
+			font-size: 0; 
+			line-height: 50px; 
+			margin: 20px 0px 40px 0px;
+			background-image: url(images/logo.png); 
+			background-position: top left; 
+			background-repeat: no-repeat; 
+			background-size: contain;
+		}
 		
-		h1{background-image: url(images/logo.png); background-position: top left; background-repeat: no-repeat; background-size: contain;}
-		h1 span{visibility: hidden;}
+		ul {
+			list-style: square;
+		}
 		
-		h2.TMTitle{background-image: url(images/tm-title-transparent.png); background-position: top left; background-repeat: no-repeat; background-size: contain;}
-		h2.TMTitle span{visibility: hidden;}
+		main {
+			box-sizing: border-box;
+			background-color: #1A0F0F; 
+			color: #fffe98;
+			min-height: 75%;
+		}
 		
-		hr{margin-top: 10px; border-top: 1px solid #dddddd; margin-bottom: 10px; border-left: none; border-right: none; border-bottom: none;}
+		.main-inner {
+			box-sizing: border-box; 
+			max-width: 1024px; 
+			padding: 20px; 
+			text-align: left; 
+			margin-left: auto; 
+			margin-right: auto; 		
+		}
 		
-		main a{color: #c8102e; transition: all 0.2s linear;}
-		main a:hover{color: #012169;}
+		section {
+			padding-bottom: 20px; border-bottom: 1px solid #4f3d35; margin-bottom: 20px;
+		}
 		
-		section p:last-child{margin-bottom: 0px;}
 		
-		a.image-link {display: block; width: 200px; max-width: 25%; margin: 0 0 20px 0px; border-left: 20px solid white; float: right;}
-		a.image-link img {max-width: 100%; width: 100%;}
+		hr {
+			margin-top: 10px; 
+			border-top: 1px solid #4f3d35; 
+			margin-bottom: 10px; 
+			border-left: none; 
+			border-right: none; 
+			border-bottom: none;
+		}
+		
+		main a {
+			color: #f89824; 
+			transition: all 0.2s linear;
+		}
+		
+		main a:hover {
+			color: #f9c337;
+		}
+		
+		small { 
+			color: #f9c337;
+		}
+		
+		section p:last-child {
+			margin-bottom: 0px;
+		}
 	
-		a.twitter-follow-button {}
+		#skyline {
+			box-sizing: border-box;
+			background-color: #f86e11;
+			background-image: url(images/amp-skyline.png), radial-gradient(circle at 75% 50px, rgba(250,226,69,1) 0%, rgba(248,110,17,1) 100%);
+			background-repeat: no-repeat;
+			background-attachment: auto, fixed;
+			background-position: center bottom, center top;
+			background-repeat: no-repeat, no-repeat;
+			background-size: auto 90%, auto;
+			padding-top: 20px;
+			min-height: 25%;
+			flex: 1 1;
+		}
 		
+		.row {
+			display: flex;
+		}
+		
+		.col-third {
+			flex: 1 1;
+			box-sizing: border-box;
+			padding: 20px;
+		}
+		
+		.album-cover {
+			width: 100%;
+		}
+		
+		@media(max-width: 800px) {
+			.row {
+				display: block;
+			}
+			
+			.col-third {
+				padding: 0;
+				margin-top: 20px;
+			}	
+
+		    .album-cover {
+				width: auto;
+			}
+		}
+		
+		.sr-only {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+		}
+	
 	</style>
 	
 </head>
 
 <body>
 	
+	<div id="skyline"></div>
+	
 	<main>
 	
-		<h1><span>Laptop Philharmonic</span></h1>
+		<div class="main-inner">
 		
-		<section id="pianoSonataEP">
-			<a class="image-link" href="https://laptopphilharmonic.bandcamp.com/album/piano-sonata-in-f-minor"><img src="sonata-5-cover.jpg" alt="Cover art for my new Piano Sonata EP" /></a>
-			<h2>Charity piano sonata EP</h2>
-			<p>I wrote a piano sonata! As ever you can listen for free if you want, but any profit I make on this is going to the British Red Cross.</p>
-			<p>If you want to donate, <a href="https://laptopphilharmonic.bandcamp.com/album/piano-sonata-in-f-minor">buy it on bandcamp</a>.</p>
-		</section>
-		
-		<section id="newAlbum">
+			<h1><span>Laptop Philharmonic</span></h1>
 			
-			<h2 class="TMTitle"><span class="TMText1">Two Mon</span><span class="TMText2">ologues</span></h2>
-			<p>Two Monologues, my latest album, was released in January 2019 and is still totally worth a listen. <a href="https://laptopphilharmonic.bandcamp.com/album/two-monologues">Find it on Bandcamp</a>.</p>
+			<section id="amp">
 			
-			<p>If Bandcamp isn't your thing, you can find my music on these (and many other) services:</p>
-			<ul>
-				<li><a href="https://open.spotify.com/artist/1qjqzEgbPSJbhOqfMXv5Kb">Spotify</a></li>
-				<li><a href="https://itunes.apple.com/us/artist/laptop-philharmonic/1251096078">iTunes</a></li>
-				<li><a href="https://play.google.com/store/music/artist/Laptop_Philharmonic?id=Aom7pkqbybku23u33fihvcxr52y">Google Play</a></li>
-			</ul>			
+				<h2>A Modern Passion</h2>
+				<p>New album out now. I will donate all profits on sales of A Modern Passion to <a href="https://notdec.org.uk/">NOTDEC</a> - a children's centre created and run by the people of Uganda, for the parentless young people of their nation. <a href="https://laptopphilharmonic.bandcamp.com">Buy it or listen free on Bandcamp</a>, or search for it on any of these:</p>
+				
+				<ul>
+					<li><a href="spotify">Spotify</a></li>
+					<li><a href="itunes">iTunes</a></li>
+					<li><a href="google_play">Google Play</a></li>
+					<li><a href="other_places">Other places</a></li>
+				</ul>
 			
-		</section>
-		
-		<section id="about">
-		
-			<h2><span class="TMText1">Who is this "<span class="TMText2">Laptop Philharmonic</span>" anyway?</span></h2>
-			<p>He's a man with a laptop, some decade-old production software, a microphone covered with a sock and a can-do attitude. A producer of the finest quality piano-led progressive electronica.</p>
+			</section>
 			
-			<p>In 2013 he had a brain tumour removed, which he released an album about in 2016. That was <a href="https://laptopphilharmonic.bandcamp.com/album/craniotomy">Craniotomy</a>. More recently he released Two Monologues, which he hasn't explained the meaning of.</p>
-		
-		</section>
-		
-		<footer>
-			<a href="https://twitter.com/ltphilharmonic" class="twitter-follow-button" data-show-count="false">Follow @ltphilharmonic on Twitter</a>
-			<br />
-			<small>&copy; all rights reserved</small>
-		</footer>
+			<section id="previous">
+				<h2>Previous Work</h2>
+				
+				<div class="row">
+				
+					<div class="col-third">
+						<img src="images/piano-sonata-cover.jpg" alt="" aria-hidden="true" class="album-cover" />
+						<h3 class="sr-only">Piano Sonata</h3>
+						<p>Released late 2009, this piece was another charity fundraising project. Think Beethoven, Chopin and Prokofiev.</p>
+					</div>
+					
+					<div class="col-third">
+						<img src="images/two-monologues-cover.jpg" alt="" aria-hidden="true" class="album-cover" />
+						<h3 class="sr-only">Two Monologues</h3>
+						<p>My second album, full of bleeps, bloops and concerto-style piano parts. We don't talk about Two Monologues.</p>
+					</div>
+
+					<div class="col-third">				
+						<img src="images/craniotomy-cover.jpg" alt="" aria-hidden="true" class="album-cover" />					
+						<h3 class="sr-only">Craniotomy</h3>
+						<p>My first album. About the time I survived 10 hours of brain surgery and all the wonderful things I learned along the way.</p>
+					</div>
+				
+				</div>
+				
+			</section>
+			
+			<section id="about">
+			
+				<h2>Who is "Laptop Philharmonic"?</h2>
+				<p>He's a man with a laptop, some decade-old production software, a microphone covered with a sock and a can-do attitude. A producer of the finest quality piano-led progressive electronica.</p>
+				
+			
+			</section>
+			
+			<footer>
+				<a href="https://twitter.com/ltphilharmonic">Follow @ltphilharmonic</a>
+				<br />
+				<small>&copy; all rights reserved</small>
+			</footer>
+
+		</div>
 
 	</main>
+	
 </body>
+
 </HTML>
